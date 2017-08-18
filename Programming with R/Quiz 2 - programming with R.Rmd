@@ -1,0 +1,86 @@
+---
+title: "Quiz1 - programming with R"
+author: "Oliver Belmans"
+date: "8/18/2017"
+output: html_document
+---
+
+# 1
+```{r}
+cube <- function(x, n) {
+        x^3
+}
+
+cube(3)
+```
+
+# 2
+```{r}
+x <- 1:10
+if(x > 5) {
+        x <- 0
+}
+```
+
+# 3
+```{r}
+f <- function(x) {
+        g <- function(y) {
+                y + z
+        }
+        z <- 4
+        x + g(x)
+}
+z <- 10
+f(3)
+```
+
+# 4
+```{r}
+x <- 5
+y <- if(x < 3) {
+        NA
+} else {
+        10
+}
+
+y
+```
+
+# 5
+```{r}
+h <- function(x, y = NULL, d = 3L) {
+        z <- cbind(x, d)
+        if(!is.null(y))
+                z <- z + y
+        else
+                z <- z + f
+        g <- x + y / z
+        if(d == 3L)
+                return(g)
+        g <- g + 10
+        g
+}
+```
+f
+
+# 6 
+Whats an environment in R?
+* a collection of symbol/value pairs
+
+# 7 
+The R language uses what type of scoping rule for resolving free variables?
+* lexical scoping
+
+# 8
+How are free variables in R functions resolved?
+- The values of free variables are searched for in the environment in which the function was defined
+
+# 9
+What is one of the consequences of the scoping rules used in R?
+- All objects must be stored in memory
+
+# 10
+In R, what is the parent frame?
+- 
+
